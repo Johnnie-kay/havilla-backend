@@ -1,23 +1,24 @@
 const { body, validationResult } = require('express-validator');
 
 const validateBookingPayload = [
+    body('planner')
+        .notEmpty().withMessage('Planner User reference ID is required')
+        .isMongoId().withMessage('Invalid Planner Object ID format'),
     body('venue')
         .notEmpty().withMessage('Venue reference ID is required')
-        .isMongoId().withMessage('Invalid MongoDB Object ID format'),
+        .isMongoId().withMessage('Invalid Venue Object ID format'),
     body('bookedDate')
-        .notEmpty().withMessage('Booking execution date is required')
+        .notEmpty().withMessage('Booking date is required')
         .isISO8601().withMessage('Date must be a valid format (YYYY-MM-DD)'),
-    body('totalPrice')
-        .notEmpty().withMessage('Total transaction price is required')
-        .isNumeric().withMessage('Price field must be a valid numeric calculation'),
+    body('totalAmount') 
+        .notEmpty().withMessage('Total amount calculation is required')
+        .isNumeric().withMessage('Amount field must be a valid number'),
     
-    // Custom interceptor middleware to return clean JSON error logs
     (req, res, next) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(422).json({
                 success: false,
-                message: "Payload validation failure.",
                 errors: errors.array().map(err => ({ field: err.path, error: err.msg }))
             });
         }
