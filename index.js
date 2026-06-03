@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 10000;
 connectDatabase();
 
 app.use(cors({
-    origin: '*', // Allows all frontend origins to access your API during staging/testing
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
