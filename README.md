@@ -579,7 +579,7 @@ For detailed API documentation, refer to the Postman collection or OpenAPI/Swagg
 
 1. Create a feature branch
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feature/feature-name
    ```
 
 2. Make your changes and commit
@@ -589,7 +589,7 @@ For detailed API documentation, refer to the Postman collection or OpenAPI/Swagg
 
 3. Push to your fork
    ```bash
-   git push origin feature/your-feature-name
+   git push origin feature/feature-name
    ```
 
 4. Open a Pull Request
