@@ -2,11 +2,11 @@
 
 Production-grade MVC Service Architecture for the Havilla venue booking platform. Built with Node.js, Express, and MongoDB.
 
-## 📋 Overview
+## Overview
 
 Havilla Backend is a RESTful API server that powers the Havilla mobile application. It provides comprehensive endpoints for venue management, booking operations, user authentication, and calendar availability tracking.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Core Framework
 - **Node.js**: Runtime environment
@@ -31,7 +31,7 @@ Havilla Backend is a RESTful API server that powers the Havilla mobile applicati
 ### Development Tools
 - **Nodemon**: 3.1.14 - Auto-restart development server
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 havilla-backend/
@@ -68,7 +68,7 @@ havilla-backend/
 └── README.md                     # This file
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js >= 16.x
@@ -134,7 +134,7 @@ GET /health
 ```
 Returns API status.
 
-## 🔐 Authentication Endpoints
+## Authentication Endpoints
 
 ### Register User
 ```
@@ -200,7 +200,7 @@ POST /api/auth/refresh-token
 Authorization: Bearer {token}
 ```
 
-## 🏢 Venue Endpoints
+## Venue Endpoints
 
 ### Get All Venues
 ```
@@ -275,7 +275,7 @@ DELETE /api/venues/:venueId
 Authorization: Bearer {admin_token}
 ```
 
-## 📅 Booking Endpoints
+## Booking Endpoints
 
 ### Create Booking
 ```
@@ -347,7 +347,7 @@ DELETE /api/bookings/:bookingId
 Authorization: Bearer {token}
 ```
 
-## 📆 Calendar & Availability Endpoints
+## Calendar & Availability Endpoints
 
 ### Check Venue Availability
 ```
@@ -400,7 +400,7 @@ Query parameters:
 - `month` - Month (1-12)
 - `year` - Year (YYYY)
 
-## 🔒 Security Features
+## Security Features
 
 ### Authentication
 - JWT-based authentication
@@ -422,7 +422,7 @@ Query parameters:
 - Allowed methods: GET, POST, PUT, PATCH, DELETE, OPTIONS
 - Allowed headers: Content-Type, Authorization
 
-## 📧 Email Service
+## Email Service
 
 ### Configuration
 Uses **Resend** API for transactional emails.
@@ -433,7 +433,7 @@ Uses **Resend** API for transactional emails.
 - **Booking Reminder**: Sent 24 hours before event
 - **Password Reset**: Sent for password recovery
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### User Model
 ```javascript
@@ -488,14 +488,14 @@ Uses **Resend** API for transactional emails.
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run tests (add test script to package.json when implementing)
 npm test
 ```
 
-## 📦 Deployment
+## Deployment
 
 ### Prerequisites for Production
 - MongoDB Atlas account (or self-hosted MongoDB)
@@ -520,7 +520,7 @@ docker build -t havilla-backend .
 docker run -p 10000:10000 --env-file .env havilla-backend
 ```
 
-## 🔧 Error Handling
+## Error Handling
 
 All API responses follow a consistent format:
 
@@ -543,7 +543,7 @@ All API responses follow a consistent format:
 }
 ```
 
-## 🚦 Status Codes
+## Status Codes
 
 - `200` - OK / Successful request
 - `201` - Created / Resource created
@@ -554,7 +554,7 @@ All API responses follow a consistent format:
 - `409` - Conflict / Resource already exists
 - `500` - Internal Server Error
 
-## 🔄 Middleware
+## Middleware
 
 ### Authentication Middleware
 - Verifies JWT tokens
@@ -571,11 +571,11 @@ All API responses follow a consistent format:
 - Returns consistent error responses
 - Logs errors for debugging
 
-## 📝 API Documentation
+## API Documentation
 
 For detailed API documentation, refer to the Postman collection or OpenAPI/Swagger specification (if available).
 
-## 🤝 Contributing
+## Contributing
 
 1. Create a feature branch
    ```bash
@@ -594,35 +594,13 @@ For detailed API documentation, refer to the Postman collection or OpenAPI/Swagg
 
 4. Open a Pull Request
 
-## 🐛 Known Issues & Limitations
-
-- Document any known issues here
-- List limitations of current implementation
-- Note deprecated features if any
-
-## 🚀 Future Enhancements
-
-- [ ] Payment gateway integration (Stripe/Paystack)
-- [ ] Advanced analytics dashboard
-- [ ] Real-time notifications with Socket.io
-- [ ] Image upload to cloud storage (AWS S3/Cloudinary)
-- [ ] Rate limiting and throttling
-- [ ] Caching layer (Redis)
-- [ ] GraphQL API alternative
-- [ ] API rate limiting per user
-
-## 📞 Support & Contact
+## Support & Contact
 
 For issues, feature requests, or questions:
 - Open an issue on GitHub
 - Contact the development team
 
-## 👥 Team
-
-- **Repository Owner**: [Johnnie-kay](https://github.com/Johnnie-kay)
-- **Original Source**: [JustAjibola/havilla-backend](https://github.com/JustAjibola/havilla-backend)
-
-## 📚 Resources
+## Resources
 
 - [Express.js Documentation](https://expressjs.com/)
 - [MongoDB Documentation](https://docs.mongodb.com/)
@@ -630,7 +608,7 @@ For issues, feature requests, or questions:
 - [JWT Guide](https://jwt.io/)
 - [Resend Email Service](https://resend.com/)
 
-## 📄 License
+## License
 
 This project is under ISC License.
 
