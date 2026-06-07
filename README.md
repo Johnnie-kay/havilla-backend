@@ -121,7 +121,7 @@ havilla-backend/
 | `npm start` | Start production server |
 | `npm run dev` | Start development server with auto-reload (nodemon) |
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Base URL
 ```
